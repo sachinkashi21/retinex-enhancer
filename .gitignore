@@ -1,0 +1,17 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore virtual environment
+venv/
+
+# Ignore OS or IDE specific files
+.DS_Store
+*.swp
+*.swo
+*.log
+
+# Ignore uploaded and generated files
+static/input/
+static/output/
