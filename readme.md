@@ -22,14 +22,24 @@ This project is a simple Flask-based web application that enhances color images 
 
 RetinexFlaskApp/
 │
-├── main.py                   # Flask app with enhancement logic  
-├── static/  
-│   ├── input/               # uploaded original images  
-│   └── output/              # enhanced images  
-├── templates/  
-│   └── index.html           # upload form + image display  
-├── venv/                    # your virtual environment  
-└── README.md                # this file  
+├── main.py                   # Main Flask app with routing
+├── utils/                    # 🔧 All helper logic (modularized)
+│   ├── __init__.py
+│   ├── retinex.py            # Image enhancement logic
+│   └── file_utils.py         # Filename handling, etc.
+│
+├── static/
+│   ├── input/                # Uploaded original images
+│   └── output/               # Enhanced output images
+│
+├── templates/
+│   ├── index.html            # Upload form + image display
+│   └── gallery.html          # View all uploaded-enhanced image pairs
+│
+├── venv/                     # Your virtual environment (ignored in Git)
+├── .gitignore
+├── readme.md
+└── requirements.txt
 
 ---
 
@@ -93,15 +103,6 @@ http://127.0.0.1:5000
 2. It will be saved under `static/input/`.  
 3. The enhanced version will be saved under `static/output/` with the same name.  
 4. Both images will be shown on the result page.
-
----
-
-## 🧹 Tips
-
-- To clean `input/` and `output/` folders, just delete the files inside.
-- To avoid name collisions (same file name uploads), consider appending timestamps or UUIDs.
-
----
 
 ## 🧠 Reference
 
