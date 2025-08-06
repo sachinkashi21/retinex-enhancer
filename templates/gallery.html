@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery - Input & Output</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .pair {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .pair img {
+            width: 280px;
+            margin: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enhanced Image Gallery</h1>
+
+    <div class="gallery">
+        {% for input_img, output_img in image_pairs %}
+        <div class="pair">
+            <div class="label">Original</div>
+            <img src="{{ url_for('static', filename=input_img) }}">
+            <div class="label">Enhanced</div>
+            <img src="{{ url_for('static', filename=output_img) }}">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
