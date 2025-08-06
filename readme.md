@@ -20,7 +20,8 @@ This project is a simple Flask-based web application that enhances color images 
 
 ## 🗂️ Project Structure
 
-RetinexFlaskApp/
+```
+retinex-enhancer/
 │
 ├── main.py                   # Main Flask app with routing
 ├── utils/                    # 🔧 All helper logic (modularized)
@@ -40,6 +41,7 @@ RetinexFlaskApp/
 ├── .gitignore
 ├── readme.md
 └── requirements.txt
+```
 
 ---
 
